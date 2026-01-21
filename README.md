@@ -1,4 +1,4 @@
-# Midnight Plays
+# Kizuna
 
 A personal music journal.
 
