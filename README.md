@@ -6,7 +6,7 @@ A personal music journal.
 This project is still being built and refined.
 
 ## About
-Midnight Plays is a private space for logging songs, moods, and moments.  
+Kizuna is a private space for logging songs, moods, and moments.  
 Inspired by Spotify, shaped like a journal.
 
 ## Status
