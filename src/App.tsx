@@ -1,33 +1,31 @@
-
-import './App.css'
+import { useState } from "react"
+import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Section from "./components/Section"
-import Footer from "./components/Footer"
-import { midnightPlays, lyricsThatStayed, lovedAndLiked } from "./data/songs"
-
+import Home from "./pages/Home"
+import ArtistPage from "./pages/ArtistPage"
 
 function App() {
+  const [selectedArtist, setSelectedArtist] = useState<string | null>(null)
 
   return (
-    
     <div className="min-h-screen bg-zinc-950">
-      <Navbar />
+      <Navbar
+        selectedArtist={selectedArtist}
+        setSelectedArtist={setSelectedArtist}
+      />
 
-      <main>
-      <Hero />
-
-      <Section title="Midnight Plays" songs={midnightPlays} />
-      <Section title="Lyrics That Stayed" songs={lyricsThatStayed} />
-      <Section title="Loved & Liked" songs={lovedAndLiked} />
-
-      <Footer />
-
-      </main>
-
+      <Routes>
+        <Route
+          index
+          element={<Home selectedArtist={selectedArtist} />}
+        />
+        <Route
+          path="/artist/:artistName"
+          element={<ArtistPage />}
+        />
+      </Routes>
     </div>
   )
 }
 
 export default App
-

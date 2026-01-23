@@ -8,6 +8,11 @@ type SongCardProps = {
   variant: "midnight" | "lyric" | "favorite"
 }
 
+type Song = {
+  title: string
+  artist: string
+}
+
 export default function SongCard(props: SongCardProps) {
   const {
     title,
