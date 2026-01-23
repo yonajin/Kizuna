@@ -1,17 +1,11 @@
 import Hero from "../components/Hero"
 import Section from "../components/Section"
 import Footer from "../components/Footer"
-import SongList from "../components/SongList"
-import { songs, midnightPlays, lyricsThatStayed, lovedAndLiked } from "../data/songs"
+import { midnightPlays, lyricsThatStayed, lovedAndLiked } from "../data/songs"
 
-type Props = {
-  selectedArtist: string | null
-}
-
-export default function Home({ selectedArtist }: Props) {
+export default function Home() {
   return (
-    <div className="pt-24">
-      <SongList songs={songs} selectedArtist={selectedArtist} />
+    <div className="pt-15">
       <Hero />
       <Section title="Midnight Plays" songs={midnightPlays} />
       <Section title="Lyrics That Stayed" songs={lyricsThatStayed} />
