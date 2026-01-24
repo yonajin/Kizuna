@@ -22,7 +22,7 @@ export default function Section({ title, songs }: SectionProps) {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {songs.map((song, index) => (
-          <SongCard key={index} {...song} />
+        <SongCard key={song.id} song={song} />
         ))}
       </div>
     </section>

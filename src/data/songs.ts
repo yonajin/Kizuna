@@ -1,4 +1,5 @@
 export type Song = {
+  id: number
   title: string
   artist: string
   rating: "like" | "love"
@@ -10,6 +11,7 @@ export type Song = {
 
 export const midnightPlays: Song[] = [
   {
+    id: 1,
     title: "Multo",
     artist: "Cup of Joe",
     rating: "love",
@@ -18,14 +20,16 @@ export const midnightPlays: Song[] = [
     variant: "midnight",
   },
   {
-    title: "Multo",
-    artist: "Cup of Joe",
+    id: 2,  
+    title: "Space Song",
+    artist: "Beach House",
     rating: "love",
-    genres: ["synthpop", "pop rock", "p-pop"],
-    cover: "../covers/silakbo.jpg",
+    genres: ["dream pop"],
+    cover: "../covers/depression_cherry.jpg",
     variant: "midnight",
   },
   {
+    id: 3,
     title: "Multo",
     artist: "Cup of Joe",
     rating: "love",
@@ -37,6 +41,7 @@ export const midnightPlays: Song[] = [
 
 export const lyricsThatStayed: Song[] = [
   {
+    id: 10,
     title: "Multo",
     artist: "Cup of Joe",
     lyric: "Hindi na makalaya, dinadalaw mo'ko bawat gabi.",
@@ -45,6 +50,7 @@ export const lyricsThatStayed: Song[] = [
     variant: "lyric",
   },
   {
+    id: 11,
     title: "Multo",
     artist: "Cup of Joe",
     lyric: "Hindi na makalaya, dinadalaw mo'ko bawat gabi.",
@@ -53,6 +59,7 @@ export const lyricsThatStayed: Song[] = [
     variant: "lyric",
   },
   {
+    id: 12,
     title: "Multo",
     artist: "Cup of Joe",
     lyric: "Hindi na makalaya, dinadalaw mo'ko bawat gabi.",
@@ -64,6 +71,7 @@ export const lyricsThatStayed: Song[] = [
 
 export const lovedAndLiked = [
   {
+    id: 4,
     title: "Nightcall",
     artist: "Kavinsky",
     rating: "like",
@@ -72,6 +80,7 @@ export const lovedAndLiked = [
     variant: "favorite",
   },
   {
+    id: 5,
     title: "Sofia",
     artist: "Clairo",
     rating: "like",
@@ -80,6 +89,7 @@ export const lovedAndLiked = [
     variant: "favorite",
   },
   {
+    id: 6,
     title: "Huwag Ka Sanang Magagalit",
     artist: "Unique Salonga",
     rating: "like",
@@ -88,6 +98,7 @@ export const lovedAndLiked = [
     variant: "favorite",
   },
   {
+    id: 7,
     title: "Twilight",
     artist: "bôa",
     rating: "like",
@@ -96,6 +107,7 @@ export const lovedAndLiked = [
     variant: "favorite",
   },
   {
+    id: 8,
     title: "We Don't Talk Anymore",
     artist: "Charlie Puth, Selena Gomez",
     rating: "love",
@@ -104,6 +116,7 @@ export const lovedAndLiked = [
     variant: "favorite",
   },
   {
+    id: 9,
     title: "Let Down",
     artist: "Radiohead",
     rating: "love",
@@ -113,11 +126,10 @@ export const lovedAndLiked = [
   },
 ]
 
-export const songs = [
-  { id: 1, title: "Creep", artist: "Radiohead" },
-  { id: 2, title: "No Surprises", artist: "Radiohead" },
-  { id: 3, title: "Lowkey", artist: "NIKI" },
-  { id: 4, title: "Karma Police", artist: "Radiohead" },
-  { id: 5, title: "Valentine", artist: "Laufey" },
+export const allLikedSongs: Song[] = [
+  ...midnightPlays,
+  ...lyricsThatStayed,
+  ...lovedAndLiked,
 ]
+
 

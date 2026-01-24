@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 import Home from "./pages/Home"
 import ArtistPage from "./pages/ArtistPage"
 
@@ -14,6 +15,7 @@ function App() {
         setSelectedArtist={setSelectedArtist}
       />
 
+<main>
       <Routes>
         <Route
           index
@@ -24,6 +26,8 @@ function App() {
           element={<ArtistPage />}
         />
       </Routes>
+</main>
+      <Footer />
     </div>
   )
 }

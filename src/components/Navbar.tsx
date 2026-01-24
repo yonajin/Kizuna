@@ -16,7 +16,7 @@ const artists = [
 ]
 
 const genres = ["Pop", "R&B", "Indie", "Synthpop", "P-pop"]
-const ratings = ["❤️", "💖"]
+const ratings = ["❤️", "💖", "All"]
 const sortOptions = [
   "Artist A–Z",
   "Artist Z–A",
@@ -52,10 +52,11 @@ export default function Navbar({ selectedArtist, setSelectedArtist }: NavbarProp
       transition={{ duration: 0.35, ease: "easeOut" }}
       className="fixed top-0 left-0 z-50 w-full bg-black text-white px-12 py-4 flex items-center justify-between"
     >
-      {/* Logo */}
-      <div className="text-xl font-bold tracking-wide">
-        Kizuna
-      </div>
+{/* Logo */}
+<a href="/" className="text-xl font-bold tracking-wide">
+  Kizuna
+</a>
+
 
       {/* Menu */}
       <div className="flex items-center gap-8 relative">
